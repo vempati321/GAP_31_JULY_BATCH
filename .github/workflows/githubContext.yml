@@ -8,8 +8,8 @@ jobs:
     steps:
       - name: Print Info about Github
         run:
-          echo 'Repository details ${{github.repository}}'
-          echo 'Repo id ${{github.repository_id}}'
+          echo "Repository details ${{ github.repository }}"
+          echo "Repo id ${{github.repository_id}}"
           echo 'Repo url ${{github.repositoryurl}}'
           echo 'Repoo token ${{github.token}}'
           echo 'Workflow name ${{github.workflow}}'
