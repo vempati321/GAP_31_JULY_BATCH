@@ -8,13 +8,13 @@ jobs:
     steps:
       - name: Print Info about Github
         run:
-          echo "Repository details ${{ github.repository }}"
-          echo "Repo id ${{github.repository_id}}"
+          echo 'Repository details ${{ github.repository }}'
+          echo 'Repo id ${{github.repository_id}}'
           echo 'Repo url ${{github.repositoryurl}}'
           echo 'Repoo token ${{github.token}}'
           echo 'Workflow name ${{github.workflow}}'
           echo 'Actor ${{github.actor}}'
           echo 'ref details ${{github.ref}}'
-          echo 'trigger event ${{github.event}}'
+          echo 'trigger event ${{github.event_name}}'
           echo 'Run id ${{github.run_id}}'
           echo 'Runner Number is ${{github.run_number}}'
