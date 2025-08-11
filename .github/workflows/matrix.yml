@@ -1,4 +1,4 @@
-name: Matrix
+name: matrix
 
 on: workflow_dispatch
 
@@ -7,9 +7,16 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
+      max-parallel: 2
       matrix:
-        os: [ubuntu-latest, windows-latest]
-        java-version: [17, 20]
+       include:
+       - index: 0
+         total: 4
+         os: ubuntu-latest
+       - index: 1
+         total: 4
+         os: windows-latest
+       java-version: [17, 21]
 
     steps:
       - name: Setup Java JDK
